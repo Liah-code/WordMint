@@ -1,0 +1,18 @@
+:root{
+    --background: #F8FAFC;
+    --primary: #2563EB;
+    --accent: #22C55E;
+    --text: #0F172A;
+    --subtext: #64748B;
+
+    --border-radius: 0.5rem;
+    --padding: 1rem;
+}
+
+:dark{
+    --background: #0B1220;
+    --primary: #38BDF8;
+    --accent: #A78BFA;
+    --text: #E5E7EB;
+    --subtext: #64748B;
+}
