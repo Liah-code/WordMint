@@ -7,6 +7,7 @@ const searchContainer = document.getElementById('search-container');
 async function fetchDefinitions() { 
     const query = searchInput.value.trim();
     console.log("button clicked")
+    
 
     const existingError = document.getElementById('error-message');
 
@@ -43,17 +44,17 @@ try {
 
     resultsContainer.innerHTML = `
         <div class="bg-[var(--background-color)] border-[var(--subtext)]  p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 mx-auto flex flex-col  text-left mb-4">
-            <h3 class="text-xl font-bold text-[#389DD9]">${item.word[0].toUpperCase() + item.word.slice(1)}</h3>
-            <p class="text-gray-700">Part of speech: ${meaning.partOfSpeech}</p>
-            <p class="text-gray-700">Pronunciation: ${item.phonetics[0]?.text || ''}</p>
-            <p class="text-gray-700">Definition: ${definition.definition}</p>
-            <p class="text-gray-700">Synonyms: ${definition.synonyms?.join(', ') || ''}</p>
-            <p class="text-gray-700">Antonyms: ${definition.antonyms?.join(', ') || ''}</p>
+            <h3 class="text-xl font-bold text-[#FFF]">${item.word[0].toUpperCase() + item.word.slice(1)}</h3>
+            <p class="text-[#A8D8FF]"><span class="font-bold text-[#EAF2FF]">Part of speech:</span> ${meaning.partOfSpeech}</p>
+            <p class="text-[#A8D8FF]"><span class="font-bold text-[#EAF2FF]">Pronunciation:</span> ${item.phonetics[0]?.text || ''}</p>
+            <p class="text-[#A8D8FF]"><span class="font-bold text-[#EAF2FF]">Definition:</span> ${definition.definition}</p>
+            <p class="text-[#A8D8FF]"><span class="font-bold text-[#EAF2FF]">Synonyms:</span> ${definition.synonyms?.join(', ') || ''}</p>
+            <p class="text-[#A8D8FF]"><span class="font-bold text-[#EAF2FF]">Antonyms:</span> ${definition.antonyms?.join(', ') || ''}</p>
         </div>
         `;
-   
 } catch (error) {
     console.error(error);
 }
 };
+
 
