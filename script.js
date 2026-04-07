@@ -43,7 +43,7 @@ try {
 
     resultsContainer.innerHTML = `
         <div class="bg-[var(--background-color)] border-[var(--subtext)]  p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 mx-auto flex flex-col  text-left mb-4">
-            <h3 class="text-xl font-bold text-[#009874]">${item.word[0].toUpperCase() + item.word.slice(1)}</h3>
+            <h3 class="text-xl font-bold text-[#389DD9]">${item.word[0].toUpperCase() + item.word.slice(1)}</h3>
             <p class="text-gray-700">Part of speech: ${meaning.partOfSpeech}</p>
             <p class="text-gray-700">Pronunciation: ${item.phonetics[0]?.text || ''}</p>
             <p class="text-gray-700">Definition: ${definition.definition}</p>

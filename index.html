@@ -7,14 +7,23 @@
     <link rel="icon" href="" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body class="bg-[var(--background)] text-[var(--text)]">
-    <nav class="p-8 border-b shadow-md h-20 flex justify-between w-full">
+  <body class="text-[var(--text)]">
+    <nav
+      class="p-8 border-b shadow-md h-20 flex justify-between bg-gradient-to-r from-[#6057E3] to-[#575EE2] w-full"
+    >
       <h1 class="italic text-4xl font-bold text-[var(--text)]">WordMint.</h1>
 
       <a href="/history.html"
         ><button
-          class="bg-[var(--primary)] px-4 py-1 rounded text-white hover:bg-blue-200 hover:text-blue-800 transition-colors duration-300"
+          class="bg-[var(--primary)] px-4 py-1 rounded text-[var(--text)] hover:bg-blue-200 hover:text-blue-800 transition-colors duration-300"
         >
           History
         </button></a
@@ -22,16 +31,22 @@
     </nav>
     <div id="search-container" class="flex flex-col items-center">
       <div
-        class="border border-gray-700 max-w-xs rounded-lg p-2 mt-8 mx-auto flex items-center justify-between"
+        class="border border-blue-700 max-w-xs rounded-full py-1 px-3 mt-8 mx-auto flex items-center justify-between"
         id="search-box"
       >
         <input
           placeholder="Search word.."
-          class="bg-transparent focus:outline-none focus:none"
+          class="bg-transparent focus:outline-none focus:none text-gray-700 w-full"
           type="text"
           id="search"
         />
-        <button id="search-button" onclick="fetchDefinitions()">Search</button>
+        <button
+          id="search-button"
+          class="hover:bg-gradient-to-r from-[#6057E3] to-[#575EE2] text-blue-500 hover:text-[var(--text)] transition-colors duration-300 px-1.5 py-1 rounded-full"
+          onclick="fetchDefinitions()"
+        >
+          <i class="fas fa-search"></i>
+        </button>
       </div>
     </div>
     <!---------------Word of the day container--------------------->
@@ -43,5 +58,5 @@
 
     <div class="flex flex-col items-center mt-8" id="result"></div>
   </body>
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </html>
